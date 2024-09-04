@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>My E-commerce Website</title>
+    <style>
+        .navbar-brand img {
+            width: 50px;
+        }
+
+        .logo-clickable {
+            cursor: pointer;
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        @media  screen and (orientation: landscape){
+            .card-img-top{
+                height: 30vh;
+                width:40vh;
+                padding:10px;
+            }
+            .card-title{
+                font-size: 15px;
+                font-family: "Roboto";
+            }
+            .card-text{
+                font-size: 15px;
+                font-weight: bold;
+            }
+            .supercrad{
+                height:60vh;
+            }
+        }
+        @media  screen and (orientation: portrait){
+            .card-img-top{
+                height: 20vh;
+                width:30vh;
+                padding:6px;
+            }
+            .card-title{
+                font-size: 10px;
+                font-family: "Roboto";
+            }
+            .card-text{
+                font-size: 8px;
+                font-weight: bold;
+            }
+            .supercrad{
+                height:40vh;
+            }
+        }
+        @media  screen and (orientation: landscape){
+            .nav-link{
+                font-size: 19px;
+                color:#ffffff;
+                padding-right:20px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        }
+        @media  screen and (orientation: portrait){
+            .nav-link{
+                font-size: 10px;
+                color:#ffffff;
+                padding-right:10px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        }
+        
+        
+        .navbar-brand{
+            height:10vh;
+            border-radius: 50px;
+            margin-right:20px;
+        }
+        #login{
+            display: flex;
+            flex-direction: column;
+            
+            align-items: center;
+        }
+        
+        .loginhead{
+            text-align:center;
+        }
+        .card1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+        .card2{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+        .image{
+            height:9vh;
+            width:10vh;
+            margin-left: 3px;
+            border-radius:30px;
+        }
+        .sign{
+            text-align: center;
+            padding-bottom: 5px;
+        }
+        .star{
+            color:red;
+        }
+        @media  screen and (orientation: landscape){
+            .aboutcard{
+                background-image: url("https://media.licdn.com/dms/image/C4E12AQE4V_B5WdfqcQ/article-cover_image-shrink_600_2000/0/1590675827395?e=2147483647&v=beta&t=IjT6hrTEFt6v2no5k1cv4XYN9PiLK6Eg8p22fob43ww");
+                background-size: cover;
+                height:100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom:10px;
+            }
+            .aboutpara{
+                color:#ffffff;
+                font-size:20px;
+                font-family:"Roboto";
+            }
+            .aboutpara1{
+                font-size:18px;
+                font-family: "Roboto";
+                text-align: center;
+            }
+            .para1{
+                font-size:18px;
+                font-family: "Roboto";
+                text-align: center;
+            }
+            .aboutpara2{
+                display: flex;
+                justify-content: center;
+        
+            }
+        }
+        @media  screen and (orientation: portrait){
+            .aboutcard{
+                background-image: url("https://media.licdn.com/dms/image/C4E12AQE4V_B5WdfqcQ/article-cover_image-shrink_600_2000/0/1590675827395?e=2147483647&v=beta&t=IjT6hrTEFt6v2no5k1cv4XYN9PiLK6Eg8p22fob43ww");
+                background-size: cover;
+                height:70vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom:10px;
+            }
+            .aboutpara{
+                color:#ffffff;
+                font-size:10px;
+                font-family:"Roboto";
+            }
+            .aboutpara1{
+                font-size:10px;
+                font-family: "Roboto";
+                text-align: center;
+            }
+            .para1{
+                font-size:10px;
+                font-family: "Roboto";
+                text-align: center;
+            }
+            .aboutpara2{
+                display: flex;
+                justify-content: center;
+        
+            }
+            .mainhead{
+                font-size: 32px;
+                font-weight: bold;
+                text-align: center;
+                color:rgb(0, 96, 128);
+            }
+            .para{
+                color:rgb(0, 0, 0);
+                font-size: 13px;
+                font-weight: bold;
+                text-align: center;
+            }
+            .productshead{
+                color:rgb(0, 0, 0);
+                font-size:15px;
+                font-weight:bold;
+                font-family: "Roboto";
+            }
+        }
+        @media screen and (orientation: landscape) {
+            .mainhead{
+                font-size: 45px;
+                font-weight: bold;
+                text-align: center;
+                color:rgb(0, 96, 128);
+            }
+            .para{
+                color:rgb(0, 0, 0);
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+            .productshead{
+                color:rgb(0, 0, 0);
+                font-size:35px;
+                font-weight:bold;
+                font-family: "Roboto";
+            }
+        }
+        
+        .change{
+            width:100vw;
+            height:20vh;
+        }
+        .image1{
+            height: 50vh;
+
+        }
+        @media  screen and (orientation:landscape){
+            .searchbar{
+                width:20vw;
+            }
+            .buttonsearch{
+                width:5vw;
+            }
+        }
+        @media  screen and (orientation:portrait){
+            .searchbar{
+                width:8vw;
+            }
+            .buttonsearch{
+                width:3vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand logo-clickable" onclick="showHomepage()">
+            <img src="https://thumbs.dreamstime.com/b/shopping-building-market-store-shopping-cart-icon-isolated-black-background-shopping-building-market-store-162266265.jpg" class="image" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showLogin()">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showContact()">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showCart()">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showAbout()">About Us</a>
+                </li>
+            </ul>
+            <form class="d-flex" onsubmit="searchProducts(event)">
+                <input class="form-control me-2 searchbar" type="search" placeholder="Search" aria-label="Search" id="search-bar">
+                <button class="btn btn-outline-success buttonsearch" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Content Area -->
+    <div class="container mt-5" id="content">
+        <!-- Homepage Content -->
+        <div id="homepage" class="homepage">
+            <h1 class="mainhead">Shopping Mart</h1>
+            <p class="para">Your one-stop shop for all your needs. We offer a wide range of products to cater to your every requirement.</p>
+            <h2 class="productshead">Our Products</h2>
+            <div id="product-list" class="row mt-3">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+
+        <!-- Other Sections (hidden by default) -->
+        <div id="login"  style="display: none;">
+            <h2 class="loginhead">Login</h2>
+            <div class="card1 mt-3">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username <span class="star">*</span></label>
+                        <input type="text" id="username" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password <span class="star">*</span></label>
+                        <input type="password" id="password" class="form-control">
+                    </div>
+                    <button id="login-btn" class="btn btn-primary" onclick="validateLogin()">Login</button>
+                    <div id="login-message" class="alert mt-3" style="display: none;"></div>
+                    <div class="mt-3">
+                        <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="signup" style="display: none;">
+            <h2 class="sign">Sign Up</h2>
+            <div class="card2 mt-3">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="signup-username" class="form-label">Username <span class="star">*</span></label>
+                        <input type="text" id="signup-username" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="signup-email" class="form-label">Email <span class="star">*</span></label>
+                        <input type="email" id="signup-email" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="signup-password" class="form-label">Password <span class="star">*</span></label>
+                        <input type="password" id="signup-password" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="signup-confirm-password" class="form-label">Confirm Password <span class="star">*</span></label>
+                        <input type="password" id="signup-confirm-password" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="signup-mobile" class="form-label">Mobile Number <span class="star">*</span></label>
+                        <input type="tel" id="signup-mobile" class="form-control">
+                    </div>
+                    <button id="signup-btn" class="btn btn-primary" onclick="registerUser()">Sign Up</button>
+                    <div id="signup-message" class="alert mt-3" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" style="display: none;">
+            <h2>Contact Us</h2>
+            <p>You can reach us at contact@ecommerce.com or call us at <span style=color:blue;>+123456789</span>
+                Company Name: Ditto E-Commerce Solutions
+
+                    Address:
+                        1234 Commerce Street
+                        Suite 567
+                        Cityville, State, ZIP Code
+                        Country
+
+                    Phone:
+                        +1 (234) 567-8901
+
+                    Email:
+                        support@ditto-commerce.com
+
+                    Customer Support Hours:
+                    Monday - Friday: 9:00 AM - 6:00 PM
+                    Saturday: 10:00 AM - 4:00 PM
+                    Sunday: Closed
+
+                    Chat with Us:
+                    You can chat with our customer support team directly through our website. Simply click on the chat icon located at the bottom right corner of the screen to start a conversation.
+
+                    Social Media:
+
+                    Facebook:<span style=color:blue;> facebook.com/ditto-commerce</span>
+                    Twitter:<span style=color:blue;> twitter.com/ditto-commerce</span>
+
+            </p>
+        </div>
+
+        <div id="cart" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul id="cart-items" class="list-group"></ul>
+            <button id="checkout-btn" class="btn btn-success mt-3" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            <div id="checkout-message" class="alert alert-info mt-3" style="display: none;">
+                Checkout process initiated!
+            </div>
+        </div>
+
+        <div id="about" style="display: none;">
+            <h2>About Us</h2>
+            <div class="aboutcard">
+                <p class="aboutpara">"Your One-Stop Shop for Quality, Convenience, and Satisfaction."</p>
+            </div>
+            <p class="aboutpara1">One of the top e-commerce sites, Shopping Mart is committed to provide a flawless online buying experience. We provide a large selection of goods in a number of categories, such as electronics, clothing, household goods, and more. Our goal is to provide high-quality goods at affordable costs, all while guaranteeing client happiness with prompt shipment, simple return policies, and first-rate customer support. Shopping Mar is your go-to place for all things shopping, thanks to its user-friendly interface and safe payment methods. Examine our assortments and experience the ease of purchasing with us right now!.</p>
+            <div class="aboutpara2">
+                <div class="mr-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDswv4pgjFzkZm8L7-WzHV5-qTPhxzka3Y6A&s"/>
+                </div>
+            </div>
+            <p class="para1">Customer-Centric Innovation: At shopping-mart, we consider it our mission to always prioritize our customers' needs and wants. Our guiding principle is to give our consumers an outstanding shopping experience by continuously inventing and adjusting to their ever-changing needs. In order to ensure that every encounter fosters trust and enduring connections, we work hard to provide top-notch products, open pricing, and unmatched service. One purchase at a time, our goal is to provide satisfaction and create value."</p>
+        </div>
+    </div>
+
+    <script>
+        // Function to show different sections
+        function showHomepage() {
+            hideAllSections();
+            document.getElementById('homepage').style.display = 'block';
+            fetchProducts();
+        }
+
+        function showLogin() {
+            hideAllSections();
+            document.getElementById('login').style.display = 'block';
+        }
+
+        function showSignup() {
+            hideAllSections();
+            document.getElementById('signup').style.display = 'block';
+        }
+
+        function showContact() {
+            hideAllSections();
+            document.getElementById('contact').style.display = 'block';
+        }
+
+        function showCart() {
+            hideAllSections();
+            document.getElementById('cart').style.display = 'block';
+        }
+
+        function showAbout() {
+            hideAllSections();
+            document.getElementById('about').style.display = 'block';
+        }
+
+        function hideAllSections() {
+            document.getElementById('homepage').style.display = 'none';
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('signup').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+            document.getElementById('cart').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+        }
+
+        // Function to fetch products from API and display them
+        function fetchProducts() {
+            fetch('https://fakestoreapi.com/products')
+                .then(response => response.json())
+                .then(products => {
+                    const productList = document.getElementById('product-list');
+                    productList.innerHTML = '';
+                    products.forEach(product => {
+                        const productCard = `
+                            <div class="col-md-4 mb-4 supercrad">
+                                <div class="card">
+                                    <img src="${product.image}" class="card-img-top" alt="${product.title}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${product.title}</h5>
+                                        <p class="card-text">$${product.price}</p>
+                                        <button class="btn btn-primary" onclick="addToCart('${product.title}', ${product.price})">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        productList.insertAdjacentHTML('beforeend', productCard);
+                    });
+                });
+        }
+
+        // Function to search for products
+        function searchProducts(event) {
+            event.preventDefault();
+            const query = document.getElementById('search-bar').value;
+            fetch('https://fakestoreapi.com/products')
+                .then(response => response.json())
+                .then(products => {
+                    const filteredProducts = products.filter(product => product.title.toLowerCase().includes(query.toLowerCase()));
+                    const productList = document.getElementById('product-list');
+                    productList.innerHTML = '';
+                    filteredProducts.forEach(product => {
+                        const productCard = `
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="${product.image}" class="card-img-top" alt="${product.title}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${product.title}</h5>
+                                        <p class="card-text">$${product.price}</p>
+                                        <button class="btn btn-primary" onclick="addToCart('${product.title}', ${product.price})">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        productList.insertAdjacentHTML('beforeend', productCard);
+                    });
+                });
+        }
+
+        // Function to add product to the cart
+        function addToCart(title, price) {
+            const cartItems = document.getElementById('cart-items');
+            const cartItem = document.createElement('li');
+            cartItem.textContent = `${title} - $${price}`;
+            cartItem.classList.add('list-group-item');
+            cartItems.appendChild(cartItem);
+        }
+
+        // Function to validate login
+        function validateLogin() {
+            const validUsername = 'user';
+            const validPassword = 'password';
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const loginMessage = document.getElementById('login-message');
+
+            if (username === validUsername && password === validPassword) {
+                loginMessage.textContent = 'Login successful!';
+                loginMessage.className = 'alert alert-success';
+            } else {
+                loginMessage.textContent = 'Invalid username or password.';
+                loginMessage.className = 'alert alert-danger';
+            }
+
+            loginMessage.style.display = 'block';
+        }
+
+        // Function to register user
+        function registerUser() {
+            const username = document.getElementById('signup-username').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            const confirmPassword = document.getElementById('signup-confirm-password').value;
+            const mobile = document.getElementById('signup-mobile').value;
+            const signupMessage = document.getElementById('signup-message');
+
+            if (username && email && password && confirmPassword && mobile) {
+                if (password === confirmPassword) {
+                    signupMessage.textContent = 'Sign Up successful! You can now log in.';
+                    signupMessage.className = 'alert alert-success';
+                    document.getElementById('signup-username').value = '';
+                    document.getElementById('signup-email').value = '';
+                    document.getElementById('signup-password').value = '';
+                    document.getElementById('signup-confirm-password').value = '';
+                    document.getElementById('signup-mobile').value = '';
+                } else {
+                    signupMessage.textContent = 'Passwords do not match.';
+                    signupMessage.className = 'alert alert-danger';
+                }
+            } else {
+                signupMessage.textContent = 'Please fill in all fields.';
+                signupMessage.className = 'alert alert-danger';
+            }
+
+            signupMessage.style.display = 'block';
+        }
+
+        // Function to proceed to checkout
+        function proceedToCheckout() {
+            const cartItems = document.getElementById('cart-items');
+            if (cartItems.children.length > 0) {
+                document.getElementById('checkout-message').style.display = 'block';
+            } else {
+                alert('Your cart is empty!');
+            }
+        }
+
+        // Initial load
+        window.onload = showHomepage;
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
